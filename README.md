@@ -3,11 +3,11 @@
 Distributed in-memory cache system using Go, Protocal Buffers(protobuf), and gRPC
 to improve data retrieval times and ensure efficient inter-service communication.
 
-## Technologies
+### Technologies
 
 Go, Protocal Buffers, gRPC, Consul, Docker, Gin Framework, Synchronization mechanism.
 
-## Features
+### Features
 
 - Service discovery and node management using Consul
 - Basic Auth for securing cache endpoints.
