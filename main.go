@@ -16,10 +16,12 @@ func main() {
 
 	router := gin.Default()
 
-	router.GET("/get/:key", cache.GetKeyHandler)
-	router.POST("/set", cache.SetKeyHandler)
-	router.POST("/sync", cache.SyncDataHandler)
-	router.GET("/health", health_check.HealthCheckHander)
+	v1 := router.Group("/v1")
+
+	v1.GET("/get/:key", cache.GetKeyHandler)
+	v1.POST("/set", cache.SetKeyHandler)
+	v1.POST("/sync", cache.SyncDataHandler)
+	v1.GET("/health", health_check.HealthCheckHander)
 
 	router.Run(config.Server.Address)
 }
